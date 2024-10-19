@@ -27,8 +27,12 @@ To run this example without issues, the following environment setup are preferre
 
 ### Sensor Calibration
 
-The following steps provides detailed info to calibrate the sensor if necessary:
+The following steps provide detailed info to calibrate the sensor if necessary:
 
+change I2C permission  
+```bash
+sudo chmod 666 /dev/i2c-1
+```
 1. Build the package
 ```bash
 colcon build --packages-select ros2_mpu6050
@@ -75,10 +79,6 @@ accel_z_offset: 0.0
 
 ## Starting the ros2_mpu6050 node
 
-change I2C permission  
-```bash
-sudo chmod 666 /dev/i2c-1
-```
 Build the package
 ```bash
 colcon build --packages-select ros2_mpu6050
